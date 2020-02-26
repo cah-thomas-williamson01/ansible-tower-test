@@ -1,0 +1,15 @@
+---
+- name: Test Playbook
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: send mail1
+      mail:
+        host: dubstginternalsmtp.cardinalhealth.net
+        port: 25
+        from: danielle.ureta@cardinalhealth.com
+        to: danielle.ureta@cardinalhealth.com
+        subject: Test email
+        body: 'Test email was successfully sent through Ansible Tower!'
